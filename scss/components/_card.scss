@@ -1,0 +1,17 @@
+.card {
+    width: 18rem;
+    background: $white;
+    border-radius: $border-radius;
+
+    &__header{
+        img{
+            width: 100%;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+        }
+    }
+
+    &__body{
+        padding: $padding-large;
+    }
+}
