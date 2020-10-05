@@ -125,10 +125,19 @@ h6 {
 .blog__content {
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 992px) {
+    .blog__content {
+      flex-direction: column;
+      align-items: center; } }
 
 .blog .card {
   width: 30%;
   background: #EFECE3; }
+  @media (max-width: 992px) {
+    .blog .card {
+      width: 100%;
+      margin-bottom: 1rem;
+      max-width: 400px; } }
   .blog .card h6 {
     color: orange;
     margin-bottom: 1rem; }
@@ -151,90 +160,84 @@ h6 {
   margin: auto;
   max-width: 1140px; }
 
-header .alert {
-  background: #662D90;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white; }
-
-header .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px; }
-  @media (max-width: 992px) {
-    header .nav {
-      width: 100%; } }
-  header .nav__logo {
-    flex-grow: 1;
-    padding: 1rem 0; }
-    header .nav__logo img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 40px; }
-  header .nav__links {
-    margin-left: 70px;
-    flex-grow: 2;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    header .nav__links a {
-      padding: 10px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      transition: 0.5s; }
-      header .nav__links a:hover {
-        color: orange; }
-  header .nav__cart {
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: white;
+  top: 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+  header .alert {
+    background: #662D90;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1; }
-    header .nav__cart i, header .nav__cart a {
-      padding: 0 4px; }
-    header .nav__cart p {
-      background: orange;
-      height: 18px;
-      width: 18px;
+    color: white; }
+  header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; }
+    @media (max-width: 992px) {
+      header .nav {
+        width: 100%; } }
+    header .nav__logo {
+      flex-grow: 1;
+      padding: 1rem 0; }
+      header .nav__logo img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px; }
+    header .nav__links {
+      margin-left: 70px;
+      flex-grow: 2;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      header .nav__links a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        transition: 0.5s; }
+        header .nav__links a:hover {
+          color: orange; }
+    header .nav__cart {
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 50%;
-      font-size: 9px; }
-    header .nav__cart a {
-      display: inline-block;
-      text-decoration: none;
-      background: orange;
-      color: white;
-      margin-left: 15px;
-      border-radius: 50px;
-      padding: 0.5rem 1.5rem; }
-  header .nav .menu-bar {
-    font-size: 1.5rem;
-    padding: 1rem;
-    display: none; }
-    @media (max-width: 992px) {
-      header .nav .menu-bar {
-        margin-right: 1rem;
-        display: inline-block; } }
-  header .nav #check {
-    display: none;
-    width: 1rem;
-    height: 1rem;
-    top: 1rem;
-    right: 1rem; }
-    @media (max-width: 992px) {
-      header .nav #check {
+      flex-grow: 1; }
+      header .nav__cart i, header .nav__cart a {
+        padding: 0 4px; }
+      header .nav__cart p {
+        background: orange;
+        height: 18px;
+        width: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 9px; }
+      header .nav__cart a {
         display: inline-block;
-        margin-right: 1rem;
-        opacity: 0; } }
-    header .nav #check:checked {
-      display: inline-block; }
+        text-decoration: none;
+        background: orange;
+        color: white;
+        margin-left: 15px;
+        border-radius: 50px;
+        padding: 0.5rem 1.5rem; }
+    header .nav .menu-bar {
+      font-size: 1.5rem;
+      padding: 1rem; }
+    header .nav #check {
+      display: none;
+      width: 1rem;
+      height: 1rem;
+      top: 1rem;
+      right: 1rem; }
 
 .footer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/footer.png);
@@ -582,6 +585,8 @@ header .nav {
     .top__order .quantity {
       margin-right: 3rem;
       margin-left: 2rem; }
+      .top__order .quantity #number {
+        color: black; }
     .top__order .button {
       display: inline-block;
       text-decoration: none;
