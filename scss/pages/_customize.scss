@@ -1,0 +1,269 @@
+.top{
+    @include center;
+    height: 6rem;
+    background: #FFFFFF;
+    border-bottom: 1px solid ;
+    &_food{
+        @include center;
+        width: 40%;
+        img{
+            width: 4rem;
+            height: 4rem;
+            border-radius: 15px;
+        }
+        h3{
+            margin-left:$margin-extra-large;
+        }
+    }
+    &__order{
+        @include center;
+        width: 40%;
+        .text{
+           display: flex;
+            .price{
+                margin-right: 0.5rem;
+            }
+        }
+        .quantity{
+                margin:{
+                    right: 3rem;
+                    left: 2rem;
+                }
+                #number {
+                    color: $text-black;
+                }
+        }
+        .button{
+            @include button;
+            padding: 12px 50px;
+            border-radius: 15px;
+            a{
+                text-decoration: none;
+                color: $text-white;
+            }
+        }
+    }
+    i{
+        width: 20%;
+    }
+    
+}
+.upgrades{
+    margin:{
+        top:2.5rem;
+        bottom: 2.5rem;
+    }
+    &__customize{
+        @include center;
+        flex-direction: column;
+        img{
+            width: 4%;
+        }
+        h2{
+            font-weight: $font-weight-normal;
+            
+        }
+    }
+    h4{
+        @include center;
+        font-weight: $font-weight-normal;
+        margin-top: $margin-extra-large;
+    }
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        .cards{
+            background: #FFFFFF;
+            width: 23%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 22px;
+            padding: 20px;
+            .cimage{
+                width: 80%;
+                margin: auto;
+                img{
+                    width: 100%;
+                }
+            }
+            .cfooter{
+                p{
+                    font-weight: $font-weight-normal;
+                    // font-size: 1.5rem;
+                    width: 50%;
+                }
+                small{
+                    font-weight: $font-weight-normal;
+                    // font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+.included{
+    margin:{
+        top:2.5rem;
+        bottom: 2.5rem;
+    }
+    h5{
+        @include center;
+        font-weight: $font-weight-normal;
+    }
+    &__allbox{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-bottom: $margin-extra-large;
+        
+        padding: $padding-large;
+        .box{
+            width: 47%;
+            @include center;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.16);
+            margin-bottom: 25px;
+            .image{
+                width: 80px;
+                img{
+                    width: 100%;
+                }
+            }
+            .rightside{
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+                p{
+
+                }
+                img{
+        
+                }
+            }
+        }
+        
+    }
+    .allcard{
+        margin:{
+            top:2.5rem;
+            bottom: 2.5rem;
+        }
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        padding: $padding-large;
+        .cards{
+            background: #FFFFFF;
+            width: 16%;
+            display: flex;
+            flex-direction: column;
+            border-radius: $border-radius;
+            padding: $padding-large $padding-large $padding-large $padding-medium;
+            margin-right:40px;
+            margin-bottom: 20px;
+            .cimage{
+                width: 140px;
+                margin: auto;
+                @include center;
+                img{
+                    width: 100%;
+                }
+            }
+            .cfooter{
+                h6{
+                    font-weight: $font-weight-normal;
+                    font-size: 1.5rem;
+                }
+                small{
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+}
+
+.sauses{
+    h5{
+        @include center;
+        font-weight: $font-weight-normal;
+    }
+    margin:{
+        top:$margin-extra-large;
+        bottom: $margin-extra-large;
+    }
+    &__cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            padding: $padding-large;
+            .card{
+                background: #FFFFFF;
+                width: 16%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 22px;
+                padding: $padding-large $padding-large $padding-large $padding-medium;
+                margin-right:30px;
+                margin-bottom: 20px;
+                .cimage{
+                    width: 140px;
+                    margin: auto;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .cfooter{
+                    h6{
+                        font-weight: $font-weight-normal;
+                        
+                    }
+                    small{
+                        font-weight: lighter;
+                        
+                    }
+                }
+            }
+        }
+}
+.style{
+    h5{
+        @include center;
+        font-weight: 400;
+    }
+    margin:{
+        top:$margin-extra-large;
+        bottom: $margin-extra-large;
+    }
+    &__cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            padding: $padding-large;
+            .card{
+                background: #FFFFFF;
+                width: 16%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 22px;
+                padding: $padding-large $padding-large $padding-large $padding-medium;
+                margin-right:30px;
+                margin-bottom: 10px;
+                .cimage{
+                    width: 140px;
+                    margin: auto;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .cfooter{
+                    h6{
+                        font-weight: 400;
+                    }
+                    small{
+                        font-weight: lighter;
+                    }
+                }
+            }
+        }
+}

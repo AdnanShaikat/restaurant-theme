@@ -1,48 +1,38 @@
 .product {
     background: #F2F2F2;
-    padding-bottom: 100px;
+    padding-top: $display4-size;
+    padding-bottom: $display4-size;
     &__container {
-        @extend .container;
         display: flex;
         flex-wrap: wrap;
-        padding-top: 50px;
-        @media(max-width: 846px) {
-            flex-direction: column;
-        }
-        .card {
-            width: 23%;
-            background: $background-light;
-            margin: $margin-small;
-            border-radius: 50px 50px 0 0;
-            &__image {
-                img {
-                    width: 100%;
-                    border-radius: 50px 50px 0 0;
+        justify-content: space-between;
+        @extend .container;
+    }
+    .card {
+        width: 23%;
+        margin-top: $margin-extra-large;
+        &__body {
+            .btn {
+                display: block;
+                text-decoration: none;
+                padding: 15px;
+                text-align: center;
+                margin-top: $margin-medium;
+                border-radius: $border-radius-small;
+                
+            }
+            .btn-order {
+                background: $background-primary;
+                color: $text-white;
+                &:hover {
+                    background: $background-primary-dark;
                 }
             }
-            &__footer {
-                background: $background-light;
-                text-align: center;
-                padding-top: 1rem;
-                border-radius: 20px;
-                border-radius: 0 0 50px 50px;
-                h1 {
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    padding-bottom: 1.2rem;
-                }
-                .btn {
-                    text-decoration: none;
-                    display:block;
-                    padding: 10px 15px;
-                }
-                .btn__order {
-                    background: $background-primary;
-                    border-radius: $border-radius-small;
-                }
-                .btn__customize {
-                    background: $background-purple;
-                    border-radius: $border-radius-small;
+            .btn-customize {
+                background: $background-purple;
+                color: $text-white;
+                &:hover {
+                    background: $background-purple-dark;
                 }
             }
         }

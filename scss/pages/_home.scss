@@ -1,36 +1,33 @@
 .about {
     background: #EFECE3;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: $padding-big;
+    padding-bottom: $padding-big;
 
    .about-card {
        @extend .container;
        background: #FFFFFF;
        border-radius: 50px;
-       padding: 50px 0;
+       padding-top: $padding-extra-large;
+       padding-left: $padding-extra-large;
+       padding-right: $padding-extra-large;
+    
        &__title {
            @include center;
            flex-direction: column;
-           h1 {
-            //    margin: 1rem 0;
-           }
-           
-           p {
-            //    margin-bottom: 1rem;
-           }
        }
        &__body {
            display: flex;  
-           padding: 50px;
+           padding-top: $padding-small;
+           padding-bottom: $padding-extra-large;
            @media(max-width: 846px) {
             flex-direction: column;
         }
        }
        &__content {
-           padding: 2rem;
+           padding: $padding-medium;
            text-align: center;
            img {
-               height: 150px;
+               height: 120px;
            }
        }
    }
@@ -40,13 +37,12 @@
 .service {
     background-image: url(/images/section-3.png);
     width: 100%;
-    height: 310px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     @include center;
     @media(max-width: 846px) {
-        height: 600px;
+        
         padding-left: 200px;
     }
 
@@ -82,15 +78,15 @@
             left: 53%;
         }
         
-        h1, p {
-            color: white;
+        h3, p {
+            color: $text-white;
         }
 
-        h1 {
-            font-size: 50px;
+        h3 {
+            font-size: $h3-font-size;
             font-weight: 800;
             @media(max-width: 846px) {
-                font-size: 30px;
+                font-size: $h3-font-size;
             }
         }
         p {
@@ -175,7 +171,7 @@
     }
 
     &__image {
-        width: 12%;
+        width: 70px;
         img {
             width: 100%;
             border-radius: 50%;
@@ -187,19 +183,18 @@
 
     &__text {
         width: 80%;
-        margin-left: $margin-medium;
+        margin-left: $margin-extra-large;
         max-width: 90%;
         display: flex;
         flex-direction: column;
      
         
-        h1 {
+        h5 {
             color: $background-primary;
-            font-size: 26px;
             margin-bottom: $margin-small;
         }
         p {
-            font-size: 18px;
+            // font-size: 18px;
             
         }
     }
@@ -210,8 +205,9 @@
 
     .user {
         display: flex;
+        margin-top: $margin-extra-large;
         &__image {
-            width: 15%;
+            width: 50px;
         }
         
         img {

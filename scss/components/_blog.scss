@@ -8,6 +8,10 @@
     &__title {
         @include center;
         flex-direction: column;
+        margin-bottom: $margin-large;
+        img {
+            height: 10px;
+        }
     }
     &__content {
         display: flex;
@@ -17,13 +21,12 @@
     .card{
         width: 30%;
         background: $background-secondary;
-
-        h5{
+        h6{
             color: $secondary;
             margin-bottom: $margin-medium;
         }
 
-        h4{
+        h5{
             margin-bottom: $margin-medium;
         }
     }
