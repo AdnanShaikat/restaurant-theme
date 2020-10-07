@@ -16,11 +16,26 @@
     &__content {
         display: flex;
         justify-content: space-between;
+        @media(max-width: 575px){
+            display: block;
+        }
     }
 
     .card{
         width: 30%;
         background: $background-secondary;
+        @media(max-width: 575px){
+            border-radius: 22px;
+            width: 100% !important;
+            height: auto;
+        }
+        &:not(:last-child) {
+            margin-right: $margin-medium;
+            @media(max-width: 575px){
+                margin-bottom: 20px;
+            }
+        }
+
         h6{
             color: $secondary;
             margin-bottom: $margin-medium;

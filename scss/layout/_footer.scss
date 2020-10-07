@@ -20,8 +20,10 @@
         justify-content: space-between;
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         padding-bottom: $padding-extra-large-1;
-        @media(max-width: 1260px) {
+        @media(max-width: 992px) {
             flex-direction: column;
+            align-items: center;
+            
         }
         .col__1 {
             color: $text-white;
@@ -29,6 +31,10 @@
             
             &__title {
                 display: flex;
+                @media(max-width: 992px) {
+                    display: flex;
+                    align-items: center;
+                }
                 h4 {
                     color: $background-primary;
                     margin-bottom: $margin-large;
@@ -80,10 +86,6 @@
 
         .insta__page {
             display: flex;
-            @media(max-width: 1260px) {
-                flex-direction: column;
-                
-            }
             &__image {
                 flex-grow: 1;
                 margin: $margin-small;
@@ -125,8 +127,9 @@
 
     &__end {
         display: flex;
-        @media(max-width: 1260px) {
+        @media(max-width: 992px) {
             flex-direction: column;
+            align-items: center;
         }
         .all__right {
             flex-grow: 3;
@@ -139,9 +142,10 @@
             flex-grow: 1;
             display: flex;
             justify-content: flex-end;
-            @media(max-width: 1260px) {
+            @media(max-width: 992px) {
                 flex-direction: column;
                 justify-content: flex-start;
+                align-items: center;
             }
             &__image {
                 &:not(:last-child) {
