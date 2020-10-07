@@ -163,7 +163,7 @@ h6 {
 header {
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   background: white;
   top: 0;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
@@ -181,7 +181,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px; }
+    height: 80px;
+    position: relative; }
     header .nav__logo {
       flex-grow: 1;
       padding: 1rem 0; }
@@ -197,6 +198,9 @@ header {
       display: flex;
       justify-content: center;
       align-items: center; }
+      @media (max-width: 992px) {
+        header .nav__links {
+          display: none; } }
       header .nav__links a {
         padding: 10px;
         text-decoration: none;
@@ -208,8 +212,10 @@ header {
     header .nav__cart {
       display: flex;
       justify-content: center;
-      align-items: center;
-      flex-grow: 1; }
+      align-items: center; }
+      @media (max-width: 992px) {
+        header .nav__cart .user {
+          display: none; } }
       header .nav__cart i, header .nav__cart a {
         padding: 0 4px; }
       header .nav__cart p {
@@ -231,13 +237,25 @@ header {
         padding: 0.5rem 1.5rem; }
     header .nav .menu-bar {
       font-size: 1.5rem;
-      padding: 1rem; }
+      padding: 1rem;
+      display: none; }
+      @media (max-width: 992px) {
+        header .nav .menu-bar {
+          display: block; } }
     header .nav #check {
-      display: none;
-      width: 1rem;
-      height: 1rem;
-      top: 1rem;
-      right: 1rem; }
+      visibility: hidden; }
+    header .nav .sidebar {
+      transform: translateX(100%);
+      background: white;
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      top: 120px;
+      right: 0;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      transition: transform 0.5s; }
+    header .nav #check:checked ~ .sidebar {
+      transform: translateX(0); }
 
 .footer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/footer.png);
@@ -258,8 +276,7 @@ header {
     padding-bottom: 3.1rem; }
     @media (max-width: 992px) {
       .footer__content {
-        flex-direction: column;
-        align-items: center; } }
+        flex-direction: column; } }
     .footer__content .col__1 {
       color: white;
       flex-grow: 1; }
@@ -341,11 +358,6 @@ header {
       flex-grow: 1;
       display: flex;
       justify-content: flex-end; }
-      @media (max-width: 992px) {
-        .footer__end .atm__card {
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: center; } }
       .footer__end .atm__card__image {
         margin-top: 0.5rem;
         width: 60px; }
