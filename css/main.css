@@ -213,9 +213,6 @@ header {
       display: flex;
       justify-content: center;
       align-items: center; }
-      @media (max-width: 992px) {
-        header .nav__cart .user {
-          display: none; } }
       header .nav__cart i, header .nav__cart a {
         padding: 0 4px; }
       header .nav__cart p {
@@ -254,6 +251,25 @@ header {
       right: 0;
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
       transition: transform 0.5s; }
+      header .nav .sidebar__links {
+        list-style: none;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3.1rem 0; }
+        header .nav .sidebar__links li {
+          display: flex;
+          flex-direction: column; }
+        header .nav .sidebar__links a {
+          text-decoration: none;
+          color: black;
+          font-weight: 700;
+          transition: 0.5s; }
+          header .nav .sidebar__links a:not(:last-child) {
+            margin-bottom: 1rem; }
+          header .nav .sidebar__links a:hover {
+            color: orange; }
     header .nav #check:checked ~ .sidebar {
       transform: translateX(0); }
 
